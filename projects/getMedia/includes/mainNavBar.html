@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<i class="fa fa-bars fa-2x responsiveMenu" aria-hidden="true" ng-click="showMenu = !showMenu"></i>
+<nav class="top-navBar-responsive" id="top-navBar-responsive" ng-show="showMenu">
+	<header class="shoppingCart-header">
+		<h3>GetMedia</h3>
+	</header>
+	<ul class="top-navBar__ul">
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#index" ng-click="showMenu = !showMenu">home</a>
+		</li>
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#search" ng-click="showMenu = !showMenu">search</a>
+		</li>
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#vouchers" ng-click="showMenu = !showMenu">vouchers</a>
+		</li>
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#contact" ng-click="showMenu = !showMenu">contact</a>
+		</li>
+	</ul>
+</nav>
+<nav class="top-navBar">
+	<ul class="top-navBar__ul">
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#index">home</a>
+		</li>
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#search">search</a>
+		</li>
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#vouchers">vouchers</a>
+		</li>
+		<li class="top-navBar__li">
+			<a class="top-navBar__a" href="#contact">contact</a>
+		</li>
+	</ul>
+
+
+</nav>
+<div>
+	<i ng-click="showCart(false)" class=" fa fa-shopping-cart fa-2x shoppingCart-Icon"></i>
+	<div>
+		<i class="fa fa-circle fa-2x  notifierCircle"></i>
+		<p class="txt-highlight notifierCircle-Txt">{{itemsInCart}}</p>
+	</div>
+</div>

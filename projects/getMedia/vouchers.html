@@ -1,0 +1,20 @@
+
+        <div class="placeholder flex-row ">
+                <div>
+                        <h2 class="large center">GetMedia Vouchers </h2>
+                        <h3 class="center">Get voucher codes to download your favourite media</h3>
+                        <h3 class="center">Click buy to add to cart</h3>
+                </div>
+        </div>
+        <div class="flex-row space-between">
+        <div class="voucher-wrapper" data-ng-repeat="voucher in vouchers">
+                <div class="voucherCard-front">
+                        <img src="images/itunesVoucher.jpg" alt="Itunes voucher Card">
+                        <div class="voucherPrice-tag">{{voucher.name}}</div>
+                </div>
+                <div class="voucherCard-footer">
+                        <h3>{{voucher.description}}</h3>
+                        <button class="button btn-fullWidth" data-ng-click="addItem($event,voucher.cost,voucher.description)">Buy</button>
+                </div>
+        </div>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+   <div class="shoppingCart-wrapper" ng-hide="hideCart">
+    <header class="shoppingCart-header">
+        <h3>shopping cart</h3>
+        <button class="btn-clearCart" ng-click="clearCart()">empty</button>
+        <button class="btn-closeCart" ng-click="showCart(true)">close</button>
+    </header>
+    <div class="shoppingCart-main">
+        <div class="shoppingCart-itemRow" ng-repeat="items in cart | orderBy:'$index':true">
+        <div class="shoppingCart-text-container">
+        	<p class="shoppingCart-text">{{items.song}}</p>
+			<p class="shoppingCart-text txt-highlight">{{items.price | currency: '£'}}</p></div>
+			<button class="btn-removeItem" ng-click="removeItem($index)">X</button>
+        
+        </div>
+		
+        </div>
+        <div class="shoppingCart-cost-wrapper">
+                <p>Items</p>
+            <h3 class="txt-highlight">{{itemsInCart}}</h3>
+			
+			<h3>Total Cost</h3>
+			<h3 class="txt-highlight">{{getTotal()| currency: '£'}}</h3></div>    
+    <footer class="shoppingCart-footer">
+        
+        <a ng-click="showCart(true)" href="#purchase">Purchase</a>
+    </footer>
+</div>
