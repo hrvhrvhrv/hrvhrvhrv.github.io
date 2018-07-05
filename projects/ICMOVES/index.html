@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--ng app added to the html tag to let hte browser know the page is an angular app-->
+<html ng-app="icmovesApp">
+
+<head>
+	<meta charset="utf-8">
+	<!--link to the angular JS CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+	<!-- addtional angular -routing script linked to the site to allow for routing  	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.js"></script>
+	<!-- addtional angular -animation script linked to the site to allow for angular animation  	-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.32/angular-animate.min.js"></script>
+	<!--viewport meta tag to help with responsiveness-->
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<!--link to the fontAwesome CDN-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--link to owl carousel -jquery plugin- css files-->
+	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.css" type="text/css" />
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css" type="text/css" />
+	<!--link to CSS files-->
+	<link href="css/styleSheet.css" rel="stylesheet" type="text/css">
+	<link href="css/responsive.css" rel="stylesheet" type="text/css">
+	<!--link to google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Audiowide|Roboto:400,700,700i|Exo+2:300" rel="stylesheet">
+	<!--Custom favicon icon for site-->
+	<link rel="icon" type="image/png" href="images/iCMovesIcon.png">
+	<!--link to jquery CDN-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	    crossorigin="anonymous"></script>
+	<!-- link to Jquery easing CDN (for animation) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+	<!--link to weather icons-->
+	<script src="https://rawgit.com/maxdow/skycons/master/skycons.js"></script>
+
+	<title>IC Moves</title>
+</head>
+
+<body ng-controller="icmovesApp_controler">
+	<header class="float-header flex-row">
+		<div class="flex-row">
+			<h1 class="large">
+				<a class="grey-text" href="index.html">IC Moves</a>
+			</h1>
+			<!-- responsive Nav Bar -->
+			<i class="fa fa-bars fa-2x responsiveMenu" aria-hidden="true" ng-click="showMenu = !showMenu"></i>
+			<nav class="top-navBar-responsive" id="top-navBar-responsive" ng-show="showMenu">
+				<ul class="top-navBar__ul">
+					<li class="top-navBar__li">
+						<a class="top-navBar__a" href="index.html" ng-click="showMenu = !showMenu">home</a>
+					</li>
+					<li class="top-navBar__li">
+						<a class="top-navBar__a" href="results.html" ng-click="showMenu = !showMenu">to buy</a>
+					</li>
+					<li class="top-navBar__li">
+						<a class="top-navBar__a" href="results.html" ng-click="showMenu = !showMenu">to rent</a>
+					</li>
+					<li class="top-navBar__li">
+						<a class="top-navBar__a slowScroll" href="#contact" ng-click="showMenu = !showMenu">contact </a>
+					</li>
+				</ul>
+				<ul class="lower-navBar__ul darkBackground">
+					<li class="lower-navBar__li">
+						<a class="lower-navBar__a slowScroll" href="#searchProperties" ng-click="showMenu = !showMenu">property search</a>
+					</li>
+					<li class="lower-navBar__li">
+						<a class="lower-navBar__a slowScroll" href="#latesProperties" ng-click="showMenu = !showMenu">latest properties</a>
+					</li>
+					<li class="lower-navBar__li">
+						<a class="lower-navBar__a slowScroll" href="#aboutICMoves" ng-click="showMenu = !showMenu">services</a>
+					</li>
+					<li class="lower-navBar__li">
+						<a class="lower-navBar__a slowScroll" href="#icMovesServices" ng-click="showMenu = !showMenu">about IC Moves</a>
+					</li>
+					<li class="lower-navBar__li">
+						<a class="lower-navBar__a slowScroll" href="#mortgageCalculatorSection" ng-click="showMenu = !showMenu">mortgage calculator</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- ||************************************************************** || -->
+			<nav class="top-navBar">
+				<ul class="top-navBar__ul">
+					<li class="top-navBar__li">
+						<a class="dropbtn top-navBar__a" href="results.html">to buy</a>
+					</li>
+					<li class="top-navBar__li">
+						<a class="top-navBar__a" href="results.html">to rent</a>
+					</li>
+					<li class="top-navBar__li">
+						<a class="top-navBar__a slowScroll" href="#contact">contact us</a>
+					</li>
+				</ul>
+				<button class="btn-action">Login</button>
+			</nav>
+		</div>
+		<!-- ||************************************************************** || -->
+		<nav class="lower-navBar">
+			<ul class="lower-navBar__ul">
+				<li class="lower-navBar__li">
+					<a class="dropbtn lower-navBar__a slowScroll" id="hidden-theme-toggle" href="#top">change theme</a>
+					<div id="hidden-theme" class="hidden-nav">
+						<div class="hidden-nav-container">
+							<div class="">
+								<header class="div-section">
+									<h3>Change Button Colour</h3>
+
+									</p>
+								</header>
+								<div id="color-selection" class="flex-row div-section pointer">
+								</div>
+								<p class="" id="color-output">Big</p>
+
+							</div>
+							<!-- <div class="">
+								<header class="div-section">
+									<h3>change property tile size</h3>
+
+									</p>
+								</header>
+								<div id="color-selection" class="flex-row div-section pointer">
+								</div>
+								<p class="" id="color-output">Big</p>
+
+							</div> -->
+						</div>
+					</div>
+				</li>
+				<li class="lower-navBar__li">
+					<a class="dropbtn lower-navBar__a slowScroll" href="#searchProperties">property search</a>
+				</li>
+				<li class="lower-navBar__li">
+					<a class="dropbtn lower-navBar__a slowScroll" href="#latesProperties">latest properties</a>
+				</li>
+				<li class="lower-navBar__li">
+					<a class="lower-navBar__a slowScroll" href="#aboutICMoves">services</a>
+				</li>
+				<li class="lower-navBar__li">
+					<a class="lower-navBar__a slowScroll" href="#icMovesServices">about IC Moves</a>
+				</li>
+				<li class="lower-navBar__li">
+					<a class="lower-navBar__a slowScroll" href="#mortgageCalculatorSection">mortgage Calculator</a>
+				</li>
+				<li class="lower-navBar__li">
+					<a class="dropbtn lower-navBar__a slowScroll" id="hidden-weather-toggle" href="#top">check weather</a>
+					<div id="hidden-weather" class="hidden-nav">
+						<div class="hidden-nav-container flex-row">
+							<div class="page-section-third">
+								<h2 class="header-text">Current location</h2>
+
+
+								<p class="price">Address</p>
+								<h2 id="streetDisplay">Checking address...</h2>
+								<p class="price">City</p>
+								<h2 id="cityDisplay">Checking city...</h2>
+								<p class="price">Country</p>
+								<h2 id="countryDisplay">Checking country...</h2>
+							</div>
+							<div class="page-section-third">
+								<h2 class="header-text">Current conditions</h2>
+								<p class="price">Temperature</p>
+								<h1 id="tempDisplay">Checking thermometer...</h1>
+								<p class="price">Wind speed</p>
+								<p id="windSpeed">Checking wind...</p>
+								<p class="price">hourly forecast</p>
+								<p id="daycondition">Checking forcast...</p>
+
+							</div>
+
+							<div class="page-section-third">
+								<h2 class="header-text">Current Weather</h2>
+								<canvas id="icon1" width="210px" height="210px"></canvas>
+								<p id="condition"></p>
+
+
+							</div>
+						</div>
+					</div>
+
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="Main-background">
+		<div class="mainView" data-ng-view autoscroll="true">
+
+			<!-- ||************************************************************** || 
+		Section of index page - displays the search box on the home page with two buttons with links to search and rent
+		
+-->
+			<section class="splash-top-section" id="searchProperties">
+				<div class="splash-seach-wrapper">
+					<h2 class="splash-text">IC Moves Property Search</h2>
+					<div class="flex-row space-between">
+
+
+						<div class="search-nav-container">
+							<h3>where would you like to stay</h3>
+							<div class="flex-row space-between">
+								<div class="hid-nav-select-btn" data-ng-repeat="cities in cities">
+									<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+									<a href="results.html">
+										<p>{{cities}}</p>
+									</a>
+								</div>
+							</div>
+							<h3>what kind of property are you looking for</h3>
+							<div class="flex-row space-between">
+								<div class="hid-nav-select-btn" data-ng-repeat="types in propertyType|limitTo:4">
+									<a href="results.html">
+										<i class="fa {{types.icon}} fa-2x" aria-hidden="true"></i>
+										<p>{{types.type}}</p>
+									</a>
+								</div>
+							</div>
+
+							<h3>how many bedrooms would you like</h3>
+							<div class="flex-row space-between">
+								<div class="hid-nav-select-btn" data-ng-repeat="beds in beds">
+									<a href="results.html">
+										<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+										<p>{{beds}} bed</p>
+									</a>
+								</div>
+							</div>
+							<h3>what is your price range</h3>
+							<div class="flex-row space-between">
+								<div class="hid-nav-select-btn" data-ng-repeat="prices in priceRange">
+									<a href="results.html">
+										<i class="fa fa-money fa-2x" aria-hidden="true"></i>
+										<p>{{prices | currency:"£":0}}</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<a href="results.html" class="btn-action btn-splash">for sale</a>
+						<a href="results.html" class="btn-action btn-splash">for rent </a>
+
+					</div>
+
+
+			</section>
+			<!-- ||************************************************************** || 
+		Section of index page - displays the carosel of properety tiles
+-->
+			<section class="page-section" id="latesProperties">
+				<div class="page-section-full">
+					<h2 class="splash-text white">Latest Properties</h2>
+					<!-- <div id="carousel" class="owl-carousel owl-theme flex-row" data-ng-repeat="things in buildings"> -->
+					<div class="flex-row">
+
+						<div class="propertyTile" data-ng-repeat="things in buildings |limitTo:9">
+							<div>
+								<h3 ng-show="things.sale" class="price">for Sale</h3>
+								<h3 ng-show="things.rent" class="price">for Rent</h3>
+								<div class="propertyTile-img-wrap">
+									<img ng-src="{{things.imgMain}}" alt="property image">
+								</div>
+							</div>
+							<div class="bottomIndex">
+								<h3 class="price">{{things.propertyAddress}}</h3>
+								<h3 class="">{{things.title}}</h3>
+								<h3>{{things.cost | currency:"£"}}</h3>
+							</div>
+							<div class="btn-view">
+								<a class="fullWidthBtn" href="property.html">view listing</a>
+							</div>
+						</div>
+
+					</div>
+					<div class="flex-row space-between">
+						<button class="btn-action btn-splash">show latest to buy</button>
+						<button class="btn-action btn-splash">show latest to rent</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- ||************************************************************** || 
+		Section of index page - displays the icmoves services with three icons and text
+-->
+			<section class="page-section" id="aboutICMoves">
+				<h2 class="splash-text">Services</h2>
+				<div class="flex-row">
+					<div class="page-section-third">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x icon-background"></i>
+							<i class="fa fa-rocket fa-stack-1x fa-inverse icon" aria-hidden="true"></i>
+						</span>
+						<h3 class="splash-text">Fast Sales</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut</p>
+						<button class="btn-action">more</button>
+					</div>
+					<div class="page-section-third">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x icon-background"></i>
+							<i class="fa fa-balance-scale fa-stack-1x fa-inverse icon" aria-hidden="true"></i>
+						</span>
+						<h3 class="splash-text">Part Exchance</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut</p>
+						<button class="btn-action">more</button>
+					</div>
+					<div class="page-section-third">
+						<span class="fa-stack fa-4x">
+							<i class="fa fa-circle fa-stack-2x icon-background"></i>
+							<i class="fa fa-money fa-stack-1x fa-inverse icon" aria-hidden="true"></i>
+						</span>
+						<h3 class="splash-text">Free Valuation</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+							aliqua. Ut</p>
+						<button class="btn-action">more</button>
+					</div>
+				</div>
+			</section>
+			<!-- ||************************************************************** || -->
+			<section class="page-section column" id="icMovesServices">
+				<div class="page-section-full white">
+					<h2 class="splash-text white">About IC Moves</h2>
+					<div class="flex-row justify-center">
+						<p class="body-txt">Working across West Central Scotland we have a large network of branches covering Renfrewshire, Ayrshire, Dunbartonshire
+							and Lanarkshire. </p>
+						<img class="img-description" src="images/edinburgh-2661502_1920.jpg" alt="scottish offices">
+					</div>
+					<div class="flex-row justify-center">
+						<img class="img-description" src="images/scotland-2048860_1920.jpg" alt="business people">
+						<p class="body-txt">
+							Well respected as one of Scotland’s favourite Estate and Letting agents you can be sure we can help find you the perfect
+							property for sale or house to rent. </p>
+
+					</div>
+
+					<div class="flex-row justify-center">
+						<p class="body-txt">
+							If you are selling your property through us you can be certain of an expert and professional service. </p>
+						<img class="img-description" src="images/office-730681_640.jpg" alt="office interior">
+					</div>
+					<div class="flex-row justify-center">
+						<img class="img-description" src="images/team-866663_640.jpg" alt="business people">
+						<p class="body-txt">
+							All our agents are on hand to provide you with local property market knowledge so you can find what it is you are looking
+							for.
+						</p>
+
+					</div>
+				</div>
+			</section>
+			<!-- ||************************************************************** || -->
+			<section id="mortgageCalculatorSection" class="page-section">
+
+
+				<div class="page-section-mortgageCalc">
+					<h2 class="splash-text">Mortgage Calculator</h2>
+					<div class="page-section-mortgageCalc-text">
+						<!-- <h3 class="splash-text">Part Exchance</h3> -->
+						<p class="center-text">Enter the value of the proptery, your deposit, the interest rate and length of mortgage to calculate month cost</p>
+					</div>
+					<div class="flex-row">
+						<div class="page-section-mortgageCalc-function">
+							<label>
+								<p class="price">Value of Property (&pound;):</p>
+								<input class="button" id="propValue" type="number" property="amount" value="150000" step="1000" />
+							</label>
+
+							<label>
+								<p class="price">Deposit Amount(&pound;):</p>
+								<input class="button" id="depoVal" type="number" property="amount" value="10000" step="1000" />
+							</label>
+							<label>
+								<p class="price">Interest rate (&#37;):</p>
+								<input class="button" id="interRat" type="number" min="0" max="100" step="0.01" value="4.25" property="interest" />
+							</label>
+							<label>
+								<p class="price">Loan period (years):</p>
+								<input class="button" id="loPer" type="number" property="years" value="30" step="5" min="5" max="50" />
+							</label>
+						</div>
+						<div class="page-section-mortgageCalc-function">
+							<div class="total">
+								<p class="price">Total borrow:</p>
+								<h4 id="borrowOutput" class="priceOutputs">click calulcate</h4>
+							</div>
+							<div>
+								<p class="price">Monthly payment:</p>
+								<h4 id="monthlyOutput" class="priceOutputs">click calulcate
+								</h4>
+							</div>
+							<button class="btn-action" id="caluclatorBTN">Calculate</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ||************************************************************** || -->
+			</div>
+	</main>
+	<footer class="main-footer">
+		<div id="contact" class="footer-section">
+			<header class="footer-section-header white">
+				<h3>Contact Details</h3>
+			</header>
+			<ul>
+				<li class="contactDetails">
+					<p class="price">Address</p>
+					<p>251 Kilmarnock Road, Shawlands</p>
+				</li>
+				<li class="contactDetails">
+					<p class="price">Phone</p>
+					<p>0141 636 4131099</p>
+				</li>
+				<li class="contactDetails">
+					<p class="price">Fax</p>
+					<p>0141 632 7136999</p>
+				</li>
+				<li class="contactDetails">
+					<p class="price">Email</p>
+					<p>contact@ICMoves.com</p>
+				</li>
+			</ul>
+		</div>
+		<div class="footer-section">
+			<header class="footer-section-header white">
+				<h3>Social Media</h3>
+			</header>
+			<div class="">
+				<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				<p>facebook</p>
+			</div>
+			<div class="">
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+				<p>twitter</p>
+			</div>
+			<div class="">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+				<p>instagram</p>
+			</div>
+
+
+
+
+		</div>
+		<div class="footer-section">
+			<header class="footer-section-header">
+				<h3>Site Map</h3>
+			</header>
+			<ul>
+				<li>
+					<i class="fa fa-link" aria-hidden="true"></i>
+					<a href="index.html">home page</a>
+				</li>
+				<li>
+					<i class="fa fa-link" aria-hidden="true"></i>
+					<a href="results.html">for sale</a>
+				</li>
+				<li>
+					<i class="fa fa-link" aria-hidden="true"></i>
+					<a href="results.html">for rent</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<div class="totheTop" id="top">^ top of page</div>
+	<script src="javascript/ICMoves.js"></script>
+
+	<script src="javascript/propertySearch.js"></script>
+	<script src="javascript/colorFont.js"></script>
+	<script src="javascript/mortgageCalc.js"></script>
+	<script src="owlcarousel/owl.carousel.js"></script>
+</body>
+
+</html>

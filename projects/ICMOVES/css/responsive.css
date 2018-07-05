@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+/*
+------------------------------------------------------------
+						Media queries 						Section
+------------------------------------------------------------
+*/
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (max-width: 900px) {
+    /* Styles */
+    html {
+        margin: auto;
+        width: 95%;
+    }
+    fieldset,
+    .searchField,
+    .splash-wrapper, .splash-seach-wrapper, .resutls-70 {
+        width: 100%;
+    }
+
+    .footer-section{
+        width: 90%;
+        margin: 15px 0 ;
+        border-top: 1px #fff solid;
+    }
+    .splash-seach-wrapper{
+        margin: 0;
+        border-radius: 0;
+    }
+    .large{
+        font-size: 1.6rem;
+    }
+    .body-txt{
+        width: 100%;
+
+    }
+    .darkBackground{
+        background: RGBA(74, 74, 74, 1.00);
+    }
+
+    .splash-wrapper svg{
+
+        height: 200px;
+    }
+    
+    .hid-nav-select-btn{
+        width: 50%;
+        border: 1px solid #fff;
+    }
+    
+    .shoppingCart-Icon {
+        padding: 15px;
+/*        border-radius: 50%;*/
+        background: #fff;
+        top: 5px;
+        right: 15px;
+/*        box-shadow: 0px 10px 20px RGBA(69, 69, 69, 0.50)*/
+    }
+    .top-navBar, .lower-navBar, .resutls-30, .property-title {
+        display: none;
+    }
+    
+
+    .searchField {
+        position: fixed;
+        bottom: 0px;
+		left: 0px;
+        background: RGBA(74, 74, 74, 0.95);
+        color: #fff;
+    }
+    i {
+        transform: scale(0.75);
+    }
+    .hideSearch {
+        background: #D0021B;
+        color: #fff;
+    }
+    .btn-removeItem-closeSearch {
+        display: block;
+        position: absolute;
+        top: -5%;
+        right: 5%;
+        width: 40px;
+        height: 40px;
+        background: #D0021B;
+        color: white;
+    }
+    /* 
+shopping cart display and removal animation
+*/
+    .shoppingCart-wrapper.ng-hide {
+        transform: rotate(0deg);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    .top-navBar-responsive.ng-hide {
+        transform: rotate(0deg);
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    .top-navBar-responsive {
+        display: block;
+        border-top:1px solid RGBA(74, 74, 74, 1.00);
+    }
+    .top-navBar__ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .top-navBar__a, .lower-navBar__a{
+        line-height: 40px;
+        padding: 0;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    .responsiveMenu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        cursor: pointer;
+        background: #fff;
+        padding: 10px;
+/*        border-radius: 50%;*/
+/*        box-shadow: 0px 10px 20px RGBA(69, 69, 69, 0.50);*/
+        z-index: 3;
+    }
+
+
+.lower-navBar__ul{
+    width: 100%;
+    margin: 0;
+}
+
+.lower-navBar__ul li{
+    width: 100%;
+
+}
+
+
+.propertyTile{
+    width: 100%;
+}
+.propertyImg{
+    height: auto;
+    margin-top: 65px;
+}
+
+    /* icmoves  */
+
+    .totheTop, .img-description{
+        display: none;
+        }
+
+        .page-section-mortgageCalc-function{
+            width: 100%;
+        }
+        /* end of break point max 900px */
+    }
