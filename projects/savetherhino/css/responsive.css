@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*
+------------------------------------------------------------
+						Media queries 						Section
+------------------------------------------------------------
+*/
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (max-width: 900px) {
+    /* Styles */
+    html {
+        margin: auto;
+        width: 100%;
+    }
+    .splash_header{
+        margin-top: 80px;
+        height: auto;
+        width: 100%;
+    }
+
+    .pageSection_60,
+    .pageSection_20,
+    .pageSection_40,
+    .images40_header 
+     {
+        width: 100%;
+    }
+
+
+
+    .btn_nextSection{
+        height:80px;
+    }
+
+   .pageSection_60 {
+        min-height: 75vh;
+    }
+
+    .pageSection_40,.images40_mainText_container{
+        overflow: visible;
+        height: auto;
+        margin: 0;
+    }
+
+
+
+
+    .images40_header,.pageSection_20,.btn_nextSection {
+        font-size: 150%;
+    }
+    .images40_header{
+        margin-top: 0;
+    }
+    .pageSection_20 img{
+     
+        filter: grayscale(0%);
+    }    
+
+.pageSection_60 img{
+    margin-left: -30%;
+    height: 80vh;
+}
+
+    .splash-wrapper svg{
+
+        height: 200px;
+    }
+    .top-navBar-responsive {
+        display: block;
+        position: fixed;
+        top: 10vh;
+        left: 0px;
+        cursor: pointer;
+        background: #fff;
+        padding: 15px;
+        z-index: 30;
+        text-align: center;
+        top: 90px;
+        width: 95%;
+        margin: 0;
+        box-shadow: 0px 10px 20px RGBA(69, 69, 69, 0.50);
+        transition: 0.2s linear all;
+        transform-origin: 100% 0;
+        z-index: 400;
+    }
+    .main_header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 500;
+        height: 80px;
+    }
+
+    
+    /* 
+shopping cart display and removal animation
+*/
+    .shoppingCart-wrapper.ng-hide {
+        transform: rotate(0deg);
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    .top-navBar-responsive.ng-hide {
+        transform: rotate(0deg);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    .top-navBar-responsive {
+        z-index: 500;
+        display: block;
+        position: fixed;
+        text-align: center;
+        top: 80px;
+        width: 100%;
+        padding-bottom: 15px;
+        margin: 0;
+        background: #fff;
+        box-shadow: 0px 10px 20px RGBA(69, 69, 69, 0.50);
+        transition: 0.2s linear all;
+        transform-origin: 100% 0;
+    }
+    .top-navBar__ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .top-navBar{
+        display: none;
+    }
+
+    }

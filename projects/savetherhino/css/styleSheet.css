@@ -1,0 +1,526 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/* CSS reset to #D0021Buce inconsistencies across browsers */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #4B4E49;;
+}
+
+html {
+	width: 100%;
+	/* margin: 0 10%;*/ 
+	font-size: 110%; 
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	background: RGBA(74, 74, 74, 1.00);
+}
+
+
+
+
+/*
+-----------------------------
+text styles
+-----------------------------
+*/
+
+
+/*
+Montserrat
+font-family: 'Montserrat', sans-serif;
+font-weight: 200;
+
+Raleway
+font-family: 'Lato', sans-serif;
+font-weight: 300;
+
+*/
+
+.large {
+	font-size: 3rem;
+	margin: 1rem;
+}
+
+.smaller {
+	font-size: 1rem;
+	margin: 1rem;
+}
+
+.txt-highlight {
+	color: #D0021B;
+	font-size: 1.2rem;
+}
+
+.center {
+	text-align: center;
+}
+
+
+/*
+-----------------------------
+flex classes - used as override
+-----------------------------
+*/
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.no-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+
+/*
+-----------------------------
+main navigation bar
+-----------------------------
+*/
+
+.top-navBar {
+	width: 45%;
+	height: 20vh;
+	padding: 10px 15px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/* justify-content: flex-end; */
+	text-align: right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #fff;
+	z-index: 1000;
+}
+
+.top-navBar a {
+color:#C1A886;
+}
+
+.top-navBar__ul {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.top-navBar__li {
+	
+	line-height: 1.75rem;
+}
+
+
+
+.top-navBar__a:hover {
+	color: RGBA(135, 163, 34, 1.00);
+	text-decoration: underline;
+}
+
+.responsiveMenu {
+	display: none;
+}
+
+.top-navBar-responsive {
+	display: none;
+}
+
+/* 
+
+
+
+*/
+
+.title{
+	color:#C1A886;
+	padding: 0.5rem 0;
+	font-size: 150%;
+}
+
+.splash_title{
+	font-size: 150%;
+}
+
+.splash_title:hover{
+	color:#4B4E49;
+}
+
+.mainView {
+	/* background: rgba(155, 155, 155, 0.1); */
+	box-sizing: border-box;
+	transform-origin: 	0% 0%;
+}
+
+.main_header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	
+	width: 100%;
+	height: 10vh;
+	color: #4B4E49;
+	
+        position: fixed;
+        top: 0;
+        right: 0
+
+}
+
+.main_header_txt{
+	font-size: 2rem;
+padding: 25px 30px;
+background: #FFC76C;
+height: 100%;
+}
+
+
+
+.splash_header{
+	margin-top: 10vh;
+	width: 60%;
+	height: 15vh;
+	background: RGBA(114, 114, 114, 0.80);
+	font-size: 125%;
+	padding: 15px 30px ;
+	/* text-align: center; */
+	line-height: 2rem;
+}
+
+.pageSection_20{
+	width: 15vw;
+	overflow: hidden;
+	height: 75vh;
+	/* border: 10px solid #fff; */
+	transition: 0.2s all linear;
+	flex-grow: 0.5;
+	font-size: 300%;
+	background: #FF8071;
+	color:#fff;
+}
+
+.pageSection_20 a{
+	color: #fff;
+}
+
+
+.pageSection_20:hover  img{
+	filter: grayscale(0%);
+
+}
+
+.pageSection_20:hover {
+	
+	background: #FFC76C;
+
+	
+
+}
+
+.pageSection_20:hover h1{
+	
+	color: #4B4E49;
+	
+
+}
+
+
+.pageSection_20 img{
+	height: 75%;
+	filter: grayscale(80%);
+	margin-left: -30%;
+}
+
+.pageSection_60 {
+	width: 60%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	object-fit: cover;
+	box-sizing: border-box;
+}
+
+.pageSection_60 img {
+	height: 70vh;
+	z-index: 5;
+}
+
+.pageSection_40 {
+	margin-top: 10vh;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	/* overflow: hidden; */
+	perspective: 1000px
+}
+
+.images40_header {
+ margin-top: 10vh;
+	font-size: 275%;
+	padding: 25px 15px;
+	width: 55%;
+	height: 20vh;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: #FF8071;
+	/* margin-left: -25%; */
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.images40_mainText_container{
+	padding: 15px 30px; 
+	height: 50vh;
+	overflow: auto;
+	box-sizing: border-box;
+	background: RGBA(114, 114, 114, 0.80);
+	margin-left: 10% ;
+}
+
+
+.title_large {
+	letter-spacing: 5px;
+	font-family: 'Space Mono', monospace;
+	color: #fff;
+}
+
+
+.page_title{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color:#FF8071;
+	background: #fff;
+	padding: 0.5rem 3rem 1.5rem 3rem;
+	font-size: 350%;
+}
+
+.output{
+	padding: 0.5rem 0;
+}
+
+.active{
+	font-size: 150%;
+	color: #FF8071;
+}
+
+.active a{
+	color: #FF8071;
+}
+
+.btn_nextSection{
+	height: 10vh;
+	background: #FFC76C;
+	color: #4B4E49;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items:  flex-end;
+	font-size: 36px;
+	padding: 15px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.width30{
+	width: 20%;
+	background: RGBA(165, 137, 96, 1.00);
+	align-items:  center;
+	justify-content: center;
+	color: white;
+}
+
+.width30 a{
+	color: white;
+}
+
+
+.width70{
+	width: 80%;
+}
+
+/*
+-----------------------------
+Angular Animations
+-----------------------------
+*/
+
+
+/* 
+transition between views animation
+*/
+
+
+/* The starting CSS styles for the enter animation */
+
+.mainView.ng-enter {
+	transition: 0.3s linear all;
+	transform: rotateY(90deg);
+	opacity: 0;
+}
+
+/* The finishing CSS styles for the enter animation */
+
+.mainView.ng-enter.ng-enter-active {
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+
+
+/* The starting CSS styles for the enter animation */
+
+
+.top-navBar__ul.ng-show {
+	transform: rotate(-90deg);
+	opacity: 0;
+}
+
+/* The finishing CSS styles for the enter animation */
+

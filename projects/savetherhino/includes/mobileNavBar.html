@@ -1,0 +1,19 @@
+<nav class="top-navBar-responsive" id="top-navBar-responsive" ng-show="showMenu">
+    <ul class="top-navBar__ul">
+        <li class="top-navBar__li" ng-class="{active : activeMenu === 'white'}">
+            <a class="top-navBar__a" href="rhinoPage.html#/name" ng-click="whatRhino(0); whatImage(1); whatMenu('white') ">White Rhino</a>
+        </li>
+        <li class="top-navBar__li" ng-class="{active : activeMenu === 'black'}">
+            <a class="top-navBar__a" href="rhinoPage.html#/name" ng-click="whatRhino(1); whatImage(1) ; whatMenu('black') ">Black Rhino</a>
+        </li>
+        <li class="top-navBar__li" ng-class="{active : activeMenu === 'one'}">
+            <a class="top-navBar__a" href="rhinoPage.html#/name" ng-click="whatRhino(2); whatImage(1); whatMenu('one') ">One Horned </a>
+        </li>
+        <li class="top-navBar__li" ng-class="{active : activeMenu === 'sam'}">
+            <a class="top-navBar__a" href="rhinoPage.html#/name" ng-click="whatRhino(3); whatImage(1); whatMenu('sam') ">Sumantran Rhino</a>
+        </li>
+        <li class="top-navBar__li" ng-class="{active : activeMenu === 'jav'}">
+            <a class="top-navBar__a" href="rhinoPage.html#/name" ng-click="whatRhino(4); whatImage(1); whatMenu('jav') ">Javan Rhino</a>
+        </li>
+    </ul>
+</nav>
