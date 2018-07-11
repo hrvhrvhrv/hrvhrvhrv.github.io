@@ -1,0 +1,934 @@
+/* CSS Document */
+
+/*
+------------------------------------------------------------------------------------------
+                    CSS reset to reduce inconsistencies across browsers 					Section
+------------------------------------------------------------------------------------------
+*/
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+html {
+    background: #4A4A4A;
+    color: #4A4A4A;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+
+body {
+    line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    vertical-align: baseline;
+    background: transparent;
+    color: #4A4A4A;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 30px;
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+}
+
+th {
+    padding: 12px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+td {
+    /*width: 135px;*/
+    padding: 15px;
+    border-top: 1px solid black;
+    height: 25px;
+    color: white;
+}
+
+tr:hover {
+    background: #6f6850;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/* end of CSS reset*/
+
+/*
+----------------------------------------
+* html5 element Styles
+*
+----------------------------------------
+*/
+
+header {
+    width: 100%;
+    color: white;
+}
+
+
+main {
+    flex-wrap: wrap;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    flex-wrap: nowrap;
+    padding-left: 350px;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder {
+    /*color: white;*/
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 100;
+
+}
+
+input[type="submit"] {
+    border: none;
+    font-size: 1.4rem;
+}
+
+input[type="text"], input[type="number"], option, input[type="password"] {
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+/*
+----------------------------------------
+* Text Styles
+*
+----------------------------------------
+*/
+
+/*
+font-family: 'Roboto Slab', serif;
+font-family: 'Share Tech Mono', monospace;
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin: 0.2rem 0;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 15%;
+    min-width: 350px;
+    font-size: 3rem;
+    text-align: center;
+    padding: 25px 0;
+    /*text-decoration: underline wavy;*/
+    /*text-decoration-color: #6f6850;*/
+    background: #7DA352;
+    text-shadow: 6px 4px 2px RGBA(72, 72, 72, 0.40);
+}
+
+.center {
+    text-align: center;
+}
+
+.txt_results {
+    margin-top: 100px;
+}
+
+.highlight {
+    color: #990010;
+
+}
+.white{
+    color: white;
+    font-size: 2rem;
+}
+
+.title {
+    padding: 0.6rem;
+    font-size: 1.8rem;
+    color: #4A4A4A;
+
+}
+
+.btn_text {
+    font-size: 2.5rem;
+    text-decoration-color: #990010;
+    color: #ffffff;
+    text-shadow: 4px 6px 2px RGBA(72, 72, 72, 0.40);
+    text-decoration: underline;
+    text-decoration-color: #990010;
+
+}
+
+.footer_title {
+    color: #ffffff;
+
+    font-size: 1.8rem;
+    text-shadow: 4px 2px 2px RGBA(72, 72, 72, 0.40);
+
+}
+
+.txt_wrap {
+    padding: 15px;
+}
+
+.subTitle {
+    font-style: italic;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    margin: 5px 10px;
+    /*text-shadow: 4px 2px 2px RGBA(72, 72, 72, 0.40);*/
+    color: #4A4A4A;
+
+}
+
+.highlight_price{
+    font-size: 10rem;
+}
+
+
+.botPad {
+    padding-bottom: 10px;
+}
+
+
+.padTop10 {
+
+    padding: 10px 0 0 10px;
+}
+
+.icon {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100px;
+    padding-top: 20px;
+    background: #7DA352;
+    color: white;
+    text-align: center;
+    /*font-size: 1.1rem;*/
+    border: none;
+    border-radius: 0;
+}
+
+a .icon {
+    color: white;
+    font-size: 1rem;
+}
+
+.icon:hover {
+
+    background: #990010;
+}
+
+.icon_search {
+    padding: 0;
+    width: 25vw;
+    right: 160px;
+}
+
+.icon_profile {
+    right: 80px;
+    /*background: #990010;*/
+}
+
+.icon_age {
+    right: 25%;
+    width: 250px;
+}
+
+.icon_brand {
+    right: 40%;
+    width: 250px;
+}
+
+.icon_price {
+    width: 250px;
+    right: 55%;
+}
+
+
+/*
+----------------------------------------
+* error messages Styles
+*
+----------------------------------------
+*/
+
+.errors {
+    padding: 1em;
+    border: 1px solid red;
+    background-color: lightyellow;
+    color: red;
+    margin-bottom: 1em;
+    overflow: auto;
+}
+.errors ul {
+    margin-left: 1em;
+}
+
+/*
+----------------------------------------
+* flex Styles
+*
+----------------------------------------
+*/
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.noWrap {
+    flex-wrap: nowrap;
+}
+
+.spaceAround {
+    justify-content: space-around;
+}
+
+/*
+----------------------------------------
+* class Styles
+*
+----------------------------------------
+*/
+
+/*
+-   Nav bar
+
+check this out
+https://codepen.io/WithAnEs/pen/yAbdk?q=animated%20sidebar&order=popularity&depth=everything&show_forks=false
+
+*/
+.nav-left {
+    position: fixed;
+    justify-content: space-between;
+    width: 15%;
+    height: 80vh;
+    min-width: 350px;
+    background: white;
+    top: 10vh;
+}
+
+.nav-left {
+    left: 0;
+}
+
+.nav-left li {
+    padding: 30px 15px;
+}
+
+.nav-left a {
+    transition: all 300ms ease-in-out;
+}
+
+.nav-left a:hover {
+    /*color: #7DA352;*/
+    text-decoration: underline;
+    text-decoration-color: #990010;
+}
+
+.fixedBottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    width: 15%;
+    min-width: 350px;
+    padding: 30px 15px;
+    background: #7DA352;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+
+}
+
+.fixedBottom:hover {
+    background: #990010;;
+    /*color: #990010;*/
+}
+
+/*
+-   Main page container
+*/
+
+.container {
+    width: 100%;
+    margin: 0 0 0 350px;
+}
+
+.content_wrapper{
+    width: 100%;
+    min-height: 90vh;
+}
+
+.content_wrapper_left{
+    width: 60%;
+    min-height: 65vh;
+    color: #4A4A4A;
+    text-align: left;
+}
+
+.content_wrapper_left__Img{
+    object-fit: cover;
+    height: 90vh;
+    /*width: 100%;*/
+    z-index: 0;
+}
+
+.content_wrapper_right{
+    width: 40%;
+    min-height: 65vh;
+    background: white;
+    color: #4A4A4A;
+}
+
+.splash, .splash_little {
+    width: 60%;
+    height: 10vh;
+    background: #b9ae84;
+    color: #4A4A4A;
+    text-align: left;
+    /*padding: 10px;*/
+
+}
+
+.splash_row{
+    margin-left:350px ;
+    /*box-shadow: 5px 5px 5px grey;*/
+}
+
+.adminPage{
+    width: 100%;
+    min-height: 90vh;
+    /*background: #b9ae84;*/
+    /*color: #4A4A4A;*/
+    text-align: left;
+    padding: 10px;
+    min-height: 65vh;
+}
+
+.admin_btn{
+    width: 50%;
+    box-sizing: border-box;
+    min-height: 20vh;
+    background: #7DA352;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_btn:hover{
+    background: #990010;
+}
+
+.splash_little {
+    width: 40%;
+    background: #6f6850;
+    color: white;
+    padding: 0;
+
+}
+
+.input_searchBoxTop {
+    margin-left: 350px;
+    width: calc(100% - 350px);
+    height: 10vh;
+    background: #4A4A4A;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+/*
+----------------------------------------
+*   Product tiles
+*
+----------------------------------------
+*/
+
+/*
+    *   container wraps around all prod tiles
+*/
+
+
+.prod_tiles_container_latest {
+    min-height: 65vh;
+    width: 100%;
+    background: #4A4A4A;
+}
+
+/*
+    *   each individual prod tiles
+*/
+.prod_tile {
+    width: 25%;
+    min-width: 350px;
+    height: 45vh;
+    min-height: 475px;
+    /*margin: 0 0 0 15px;*/
+    /*color: white;*/
+    background: white;
+    border: 10px solid #4A4A4A;
+    transition: all 300ms ease-in-out;
+    box-sizing: border-box;
+}
+
+/*
+    *   :hover state each prod tiles
+*/
+
+.prod_tile:hover {
+
+    background: #990010;
+    color: white;
+
+}
+
+.prod_tile:hover .prod_tile_textWrap {
+    opacity: 1;
+}
+
+.prod_title_icon {
+    position: absolute;
+    /*bottom: 260%;*/
+    /*right: 99%;*/
+    z-index: 15;
+    background: #990010;
+    padding: 10px;
+}
+
+.prod_title_icon i {
+    z-index: 25;
+
+}
+
+/*
+    *   wrap for both text boxes within there prod tile
+    *   allows for both to have multi line text
+*/
+.prod_tile_img_wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.prod_tile_img {
+    height: 100%;
+    transition: 300ms all ease-in;
+
+    filter: grayscale(5%);
+}
+
+.prod_tile:hover .prod_tile_img {
+    filter: grayscale(0);
+    transform: scale(1.25)  rotate(5deg);
+}
+
+.prod_tile_textWrap {
+    padding: 10px 15px;
+    height: 150px;
+    /*opacity: 0.5;*/
+    /*transition: all 300ms linear;*/
+
+}
+
+.prod_tile_textBox {
+    height: 50%;
+    width: 100%;
+}
+
+/* prod tile link button */
+.btn_prod_tile {
+    position: relative;
+    border-radius: 50% 0 0 0;
+    height: 70px;
+    width: 90px;
+    background: #990010;
+    color: white;
+    bottom: 115px;
+    left: calc(100% - 90px);
+    transition: all 300ms ease-in-out;
+    text-align: right;
+    padding: 20px 10px;
+    font-size: 1.2rem;
+    transform-origin: 100% 100%;
+
+}
+
+.prod_tile:hover .btn_prod_tile {
+    opacity: 1;
+    background: #ffffff;
+    color: #4A4A4A;
+    transform: scale(1.5);
+
+    font-size: 1.2rem;
+}
+
+.btn_prod_tile:hover {
+    text-decoration: underline;
+    background: #ffffff;
+}
+
+
+/*
+----------------------------------------
+* Footer
+*
+----------------------------------------
+*/
+
+.footer_div {
+    width: 33.3%;
+    height: 10vh;
+    padding: 20px;
+    background: #6f6850;
+}
+
+.footer_div:hover {
+    background: #7DA352;
+
+}
+
+/*
+----------------------------------------
+* btn Styles + input styles
+*
+----------------------------------------
+*/
+
+.btn {
+    width: 100%;
+    height: 75px;
+    border: none;
+    background: #990010;
+    color: white
+}
+
+.btn:hover {
+    background: white;
+    color: #990010;
+}
+
+.btn_submit {
+    width:30%;
+    height: 10vh;
+    margin: 0;
+}
+
+.btn_submitSml {
+    width: 50px;
+    height: 8vh;
+    background: #990010;
+    color: white;
+    margin-top: 15px;
+    margin-left: -15px;
+    padding: 10px 0;
+    font-style: italic;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: none;
+
+}
+
+.input_std {
+    height: 6vh;
+    width: 60%;
+    margin: 5px auto;
+    padding: 10px;
+    color: #4A4A4A;
+    font-size: 2vh;
+    font-style: italic;
+    box-sizing: border-box;
+    border-radius: 0;
+    border: grey solid 5px;
+    border-bottom-color: #990010;
+}
+
+.input_50Wid {
+    width: 60%;
+    margin-right: 15px;
+    left: 0;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.input_std:hover {
+    border-color: #990010;
+}
+
+.top_search {
+    width: 20vw;
+    padding-left: 10px;
+}
+
+
+
+.input_searchBar {
+    width: 50%;
+}
+
+.form_login, .form_search, .form_register {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    /*padding:  15px;*/
+}
+
+.txt_textArea {
+    text-align: left;
+    margin-right: 15px;
+    height: 125px;
+    padding: 15px;
+    width: 60%;
+}
+
+.pad_right{
+    padding-right: 30px;
+}
+
+/*
+*
+*
+*
+*/
+
+/*
+----------------------------------------
+*   Product pages
+*
+----------------------------------------
+*/
+
+/*
+    *   each individual prod tiles
+*/
+.prod_page {
+    width: 100%;
+    min-height: 65vh;
+    transition: all 300ms ease-in-out;
+
+}
+
+
+
+
+/*
+    *   wrap for both text boxes within there prod tile
+    *   allows for both to have multi line text
+*/
+
+.prod_page_textWrap{
+    width: 40%;
+    padding-top: 5vh;
+    height: 90vh;
+    transition: all 600ms ease-in-out;
+    z-index: 2;
+    background: white;
+
+}
+
+
+
+.prod_page_img_wrapper {
+    width: 60%;
+    height: 90vh;
+    overflow: hidden;
+
+}
+
+.prod_page_img {
+    height: 90vh;
+    z-index: 0;
+
+}
+
+.prod_page_img_half {
+    width: 50%;
+    height: 25vh;
+
+}
+
+.prod_page_textBox {
+    width: 100%;
+    padding: 15px;
+}
+
+/* prod tile link button */
+.btn_page_tile {
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    background: #990010;
+    color: white;
+    bottom: 0;
+    right: 0;
+    transition: all 300ms ease-in-out;
+    text-align: center;
+    padding-top: 0.5rem;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+
+.btn_page_tile:hover {
+    background: #4A4A4A;
+}
+
+.btn_prod_page:hover {
+    text-decoration: underline;
+    background: #4A4A4A;
+}
+
+i {
+    color: white;
+}
+.searchBox{
+    background: white;
+    border: none;
+    width:70%;
+    padding: 0;
+    margin: 0;
+    height: 10vh;
+    color: #4A4A4A;
+    font-size: 1.4rem;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+
+.searchBox:focus{
+    background: white;
+}
+
+.searchBox::-webkit-input-placeholder{
+    color: #6f6850;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 100;
+}
+
+
+.backBtn{
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    left: 350px;
+    background:#c7be9c;
+    color: white;
+}
+.backBtn a{
+    color: white;
+}
+
+/**
+
+Media queries start here
+**/
+
+
+@media screen and (max-width: 1200px) {
+    .nav-left, .splash_little {
+        display: none;
+
+    }
+    .logo{
+        position: unset;
+    }
+
+    .txt_textArea, .txt_textArea{
+        width: 75%;
+    }
+
+    .flex_row  {
+        flex-direction: column;
+    }
+    .prod_page_textWrap, .prod_page_img_wrapper, .container,.splash, .splash_row, footer, .footer_div, .prod_tile{
+        width:100% ;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content_wrapper_right, .content_wrapper_left{
+        width: 100%;
+        margin: 0;
+    }
+}
