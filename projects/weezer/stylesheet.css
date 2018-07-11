@@ -1,0 +1,548 @@
+@charset "utf-8";
+
+/* !!!!!!!!!! Page wide selectors !!!!!!!!!! */
+
+/* applies styles to the whole html dociment */
+html {
+	height: 100%;
+	font-family: 'Quicksand', sans-serif;
+	color: black;
+}
+
+
+/*Selects every element within the page */
+* {
+	margin: 0px;
+}
+
+/*The container div wraps around everything on the page | setting the flex of this div makes the page responsive */
+#container {
+	display: flex; /* Sets teh div to display as a flex box*/
+	flex-direction: column; /*flex direction set to column causes the flex to arrange vertically */
+	height: 100vh; /*vh refers to teh viewport height of the window */
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+/*Content wraps around everything between header and footer */
+#content {
+	display: flex;
+	flex: 1 0 auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+/* !!!!!!!!!! Fonts !!!!!!!!!! */
+/* All fonts grouped in the CSS for easy finding */
+
+/* all links text changes to black when the mouse hovers over the link*/
+a:hover { 
+	color: black;
+}
+
+/*gives all h1 elements 10px padding on the left */ 
+h1 {
+	padding-left: 10px;
+}
+
+
+/*applies styles to both the p and h4 elements */
+p,
+h4 {
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 10px;
+}
+
+/*changes the text within elements with class="orange" */
+.orange {
+	color: orangered;
+	font-size: 15px;
+	padding-top: 0px;
+}
+
+/*changes the text within elements with class="greytext" */
+.greytext {
+	color: #9c9b9b;
+}
+
+/*increases the size of font within elements with class=".headline"*/
+.headline {
+	font-size: 36px;
+}
+
+
+/* !!!!!!!!!! Tool tip  !!!!!!!!!! */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1; 
+	top: 25%;
+	left: 105%;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent black transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+
+/* !!!!!!!!!! Header !!!!!!!!!! */
+
+header {
+	padding-left: 10%;
+	padding-right: 10%;
+	font-size:36px;
+	color: white;
+}
+
+
+/* !!!!!!!!!! Navigation bar !!!!!!!!!! */
+
+nav {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #9c9b9b;
+	margin-bottom: 20px;
+	color: white;
+}
+
+nav ul {
+	padding-left: 10%;
+}
+
+nav li {
+	display: inline-block;  /*Causes the ul to be displayed horizontally */
+}
+
+nav li:hover {
+	box-shadow: 10px 0px 3px -2px rgba(0, 0, 0, 0.4);
+}
+
+nav a {
+	text-decoration: none; /* removes the underscore from the link*/
+	line-height: 40px;
+	color: white;
+	padding: 10px;
+}
+
+nav #home a:hover { /* causes the color of links on the header to change when mouse is over link*/
+	background-color: #ffffff;
+}
+
+nav #band a:hover { /* causes the color of links on the header to change when mouse is over link*/
+	background-color: #6dcff6;
+}
+
+nav #news a:hover { /* causes the color of links on the header to change when mouse is over link*/
+	background-color: #bdd63c; 
+}
+
+nav #news a:hover { /* causes the color of links on the header to change when mouse is over link*/
+	background-color: #bdd63c;
+}
+
+nav #video a:hover { /* causes the color of links on the header to change when mouse is over link*/
+	background-color: #e2cb9f;
+}
+
+nav #contact a:hover { /* causes the color of links on the header to change when mouse is over link*/
+	background-color: #ed1b34;
+}
+
+
+
+
+/* !!!!!!!!!! Main !!!!!!!!!! */
+/*Main is the left hand box on each page */
+
+main {
+	display: flex; 
+	/* wrap causes the content to wrap around when resized. */
+	flex-direction: column;
+	/* items within main div will be flex-ed in a column style. */
+	width: 65%;
+	/* 00% of the content div*/
+}
+
+
+/*Content in main */
+/*news and band page linked together as they share the same flex propeties */
+
+#newswrap,
+#bandwrap {
+	display: flex;
+	flex: 1 0 auto;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: flex-start;
+	justify-content: flex-start;
+}
+
+#newswrap article,
+#bandwrap article {
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+#newswrap article {
+	width: 150px;
+}
+
+
+#bandwrap article {
+	width: 200px;
+	padding-left: 20px;
+}
+
+#bandwrap img {
+
+	width: 200px;
+}
+
+
+/*Video page */
+
+#videowrap {
+	display: flex;
+	/* wrap causes the content to wrap around when resized. */
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.videomain {
+	width:100%
+}
+
+ .videomain iframe { 
+	width: 100%;
+	height: 400px;
+ } 
+
+.videolink iframe { 
+	max-width: 275px;
+}
+
+/* !!!!!!!!!! Aside !!!!!!!!!! */
+/*Aside is the right hand box on each page */
+
+aside {
+	display: flex;
+	flex-direction: column;
+	width: 30%; 	/* fills the remaining % of the content container */
+	padding-top: 0px;
+	/*Padding moves the text away from the edge of the aside  */
+	margin-left: 20px;
+}
+
+aside img {
+	width: 100%;
+	padding-bottom: 10px
+}
+/*Sets a 20px margin at the bottom of each article for visual styling */
+aside article {
+	margin-bottom: 20px;
+}
+
+
+/*table for dates on news page */
+.tour table {
+	width: 100%;
+	font-size: 20px;
+	text-align: left;
+}
+.tour th {
+	font-size: 22px;
+}
+.tour th,
+.tour td,
+.tour tr {
+	border-bottom: 1px solid #ddd;
+	height: 50px;
+}
+
+
+/* Contact page - contact detals */
+#details{
+	font-size:20px;
+	}
+
+#details ul{
+	list-style:none;
+	font-size:30px;
+	background-color:white;
+	padding-left:10px;
+	margin-bottom:20px;
+	}
+
+#details h1 {
+	padding-left: 0px;
+	padding-bottom:10px;
+}
+
+#details a {
+	text-decoration:none;
+	color:black;
+	}
+
+#details a:hover {
+	color:white;
+	}
+
+
+
+/* !!!!!!!!!! form !!!!!!!!!! */
+
+form {
+	font-size: 20px;
+	color: black;
+}
+
+form input{
+	padding: 10px 0 10px 0;
+	margin-bottom:10px;
+	height: 30px;
+	width: 70%;
+	background-color: white;
+	align-items:center;
+}
+
+.input-checkbox{
+	height:20px;
+	font-size: 20px;
+	width:100px;
+}
+
+.radio{
+	height:20px;
+	font-size: 20px;
+	width:100px;
+
+	}
+
+.button{
+	margin-top:5px;
+	width:35%;
+	}
+
+fieldset {
+	border: 0;
+}
+
+select{
+	height: 50px;
+	width: 70%;
+}
+
+textarea {
+	width: 70%;
+}
+
+
+/* !!!!!!!!!! footer !!!!!!!!!! */
+
+footer {
+	font-family: 'Roboto', sans-serif;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: #9c9b9b;
+	margin-top: 20px;
+	color: white;
+	vertical-align: middle;
+}
+
+footer li {
+	display: inline-block;
+	padding: 20px;
+	text-align: center;
+	vertical-align: top;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
+
+/*Weezer logo in the footer */
+#wlogo {
+	margin: 20px 0 20px 0;
+	float: left;
+	width: 175px;
+	height: 80px;
+}
+
+/*BWM logo in the footer*/
+#bwmLogo {
+	float: right;
+	margin-top: -60px;
+	width:200px;
+	height:100px;
+}
+
+main img {
+	/*floats the image to the left of the parent element */
+	width: 100%;
+	/*Keeps the image full size but allows for automatic scaling */
+	/*define the width of the image to actual size of the image this keeps the image from getting too big*/
+	height: auto;
+
+	margin-bottom: 5px;
+}
+
+/* !!!!!!!!!! Media Quries !!!!!!!!!! */
+/*Media Quries are below this comment */
+
+@media all and (max-width: 500px) {
+	/*Changes the websited appearance when viewed at 500px */
+	html {
+		text-align: center;
+		/*aligns all content in the whole site [looks better on mobile sceeen ] */
+	}
+	#container {
+		width: 100%;
+	}
+	header {
+	font-size:24px;
+}
+
+	nav {
+		padding-left: 0;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		flex-flow: column wrap;
+		padding: 0;
+		/*padding in the nav element caused the nav to be offset */
+	}
+	nav li:hover {
+		color: black;
+		box-shadow: 10px 0px 3px -2px rgba(0, 0, 0, 0);
+	}
+	.content {
+		display: flex;
+		flex-direction: row;
+		flex-flow: row wrap;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	main {
+		width: 100%;
+	}
+
+	main img{
+		margin-right:0px;
+	}
+	#newswrap {
+		width: 100%;
+	}
+	#newswrap article {
+		width: 100%;
+	}
+	
+	#bandwrap img {
+    width: 100%;
+	height:100%;
+}
+	
+	#bandwrap {
+		width: 100%;
+	}
+	#bandwrap article {
+		width: 100%;
+		
+	}
+
+	.videolink {
+		padding: 10px;
+		width: 100%;
+	}
+
+	form input{
+
+	width: 100%;
+	}
+
+	p {
+		width: 100%;
+	}
+	img {
+		max-width: 100%;
+		width: 100%;
+	}
+	aside {
+		margin-left: 0px;
+		margin-top: 20px;
+		width: 100%;
+	}
+
+	#details ul{
+	padding:0;
+	}
+
+	.radio{
+	height:20px;
+	font-size: 20px;
+	width:50%;
+
+	}
+
+	.radio label {
+	height:20px;
+	font-size: 20px;
+	width:50%;
+
+	}
+
+	iframe {
+		width: 100%;
+	}
+	footer {
+		padding-left: 0;
+		display: none;
+	}
+	footer ul {
+		display: flex;
+		flex-direction: row;
+		flex-flow: column wrap;
+		padding-left: 0;
+		/*padding in the nav element caused the nav to be offset */
+	}
+
+	.tooltip .tooltiptext {
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+}

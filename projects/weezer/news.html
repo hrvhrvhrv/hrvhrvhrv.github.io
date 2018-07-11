@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!--charcters encoding set to all -->
+	<meta charset="utf-8">
+	<!--viewport set to the width and height of browser viewport with a zoom of 1-1 -->
+	<!--Allows for media queiry screen resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--auther of the web page-->
+	<meta name="author" content="Craig Harvey">
+	<!--description for SEO-->
+	<meta name="description" content="Weezer Official Website">
+	<!--keywords for SEO-->
+	<meta name="keywords" content="Weezer, news, music, tickets, gigs, official">
+	<!--explains to IE edge what to do. all other browsers know what to do-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--links to exernal CSS -->
+	<!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<!--Link to google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+	<!--Page tab name -->
+	<title>Weezer News</title>
+<!--Inline styles sets background color and nav bar page specific colors -->
+	<style>
+		html {
+			background-color: #bdd63c;
+		}
+
+		nav #news {
+			background-color: #bdd63c;
+			box-shadow: 10px 0px 3px -2px rgba(0, 0, 0, 0.4)
+		}
+
+		nav #news a {
+			color: black;
+		}
+
+		@media all and (max-width: 500px) { /*Inline media queries for page specific styling */
+			nav #news {
+				box-shadow: 0px 5px 3px -2px rgba(0, 0, 0, 0.4);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<!--container div starts here -->
+		<header>
+			<h1>weezer</h1> </header><!--Main page logo -->
+		<nav> <!--Horizontal Navigation bar - links to other pages - hover color changes to match each links background-color - active set to match current pages background-color  -->
+			<ul>
+				<li id="home"><a href="index.html">Home</a></li>
+				<li id="band"><a href="band.html">Band</a></li>
+				<li id="news"><a href="news.html">News</a></li>
+				<li id="video"><a href="video.html">Video</a></li>
+				<li id="contact"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			<!--content div starts here -->
+			<main><!--Main content is the left hand side of the page -->
+				<h2 class="headline">Latest News</h2>
+				<div id="newswrap">
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together -->
+						 <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+					<article><!--Articles wrap sections of text together --> <img src="images/concert-984276_1920.jpg" alt="band member">
+						<h2>Headline</h2>
+						<h6 class="orange">31/10/2016</h6>
+						<p>Proin tincidunt mi quis auctor finibus.</p>
+					</article>
+				</div>
+			</main>
+			<aside class="tour"> <!-- Aside is the right hand side of the page -->
+				<h2 class="headline">Tour Dates</h2>
+				<table> <!--Table used to layout for tour dates -->
+					<tr>
+						<th>Date</th> <!--Table headers -->
+						<th>City</th>
+						<th>Venue</th>
+						<th>Tickets</th>
+					</tr>
+					<tr>
+						<td>10 May</td> <!--Table data -->
+						<td>London</td>
+						<td>The Lexington</td>
+						<td>Sold Out</td>
+					</tr>
+					<tr>
+						<td>12 May</td>
+						<td>Sheffield</td>
+						<td>Tunnels</td>
+						<td>Sold Out</td>
+					</tr>
+					<tr>
+						<td>16 May</td>
+						<td>Leicester</td>
+						<td>House Social</td>
+						<td>Sold Out</td>
+					</tr>
+					<tr>
+						<td>20 May</td>
+						<td>Southampton</td>
+						<td>Joiners</td>
+						<td>Sold Out</td>
+					</tr>
+					<tr>
+						<td>21 May</td>
+						<td>Bristol</td>
+						<td>Thekla</td>
+						<td>Sold Out</td>
+					</tr>
+					<tr>
+						<td>23 May</td>
+						<td>Glasgow</td>
+						<td>Stereo</td>
+						<td><a href="index.html">Click Here</a></td>
+					</tr>
+				</table>
+				</aside>
+		</div>
+		<!--content div ends here -->
+		<footer>
+			<!--Footer starts here -->
+			<img id="wlogo" src="images/Weezerlogo.png" alt="W Logo"> <!--Weezer W svg logo on the left hand side-->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#.html">Site Map</a></li> <!--dead link. future development of site map page -->
+				<li><a href="#.html">Accesibility</a></li> <!--dead link.  future development of accessibility page -->
+				<li>
+					<p id="copywrite">&copy;Weezer 2016</p> <!--Copywrite symbol used-->
+				</li>
+			</ul> <img id="bwmLogo" src="images/BWM-Logo.png" alt="bwm logo"> <!--BWM svg logo on the right hand side-->
+		</footer>
+	</div>
+	<!--container div ends here -->
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--charcters encoding set to all -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--viewport set to the width and height of browser viewport with a zoom of 1-1  - Allows for media queiry screen resizing -->
+	<meta name="author" content="Craig Harvey">
+	<!--auther of the web page-->
+	<meta name="description" content="Weezer Official Website">
+	<!--description for SEO-->
+	<meta name="keywords" content="Weezer, news, music, tickets, gigs, official">
+	<!--keywords for SEO-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--explains to IE edge what to do. all other browsers know what to do-->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<!--links to exernal CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+	<!--Link to google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+	<!--Link to google fonts -->
+	<!--Page tab name -->
+	<title>Home of Weezer</title>
+	<!--Inline styles sets background color and nav bar page specific colors -->
+	<style>
+		html {
+			background-color: #ffffff;
+		}
+
+		header {
+			color: #9c9b9b;
+		}
+
+		nav #home {
+			background-color: #ffffff;
+			box-shadow: 10px 0px 3px -2px rgba(0, 0, 0, 0.4);
+		}
+
+		nav #home a {
+			color: black;
+		}
+
+		@media all and (max-width: 500px) { /*Inline media queries for page specific styling */
+			nav #home {
+				box-shadow: 0px 5px 3px -2px rgba(0, 0, 0, 0.4);
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<!--container div starts here -->
+		<header>
+			<h1 class="greytext">weezer</h1><!--Main page logo - class "greytext" sets the font color to grey, rest of site main logo is white-->
+			</header>
+		<nav> <!--Horizontal Navigation bar - links to other pages - hover color changes to match each links background-color - active set to match current pages background-color  -->
+			<ul>
+				<li id="home"><a href="index.html">Home</a></li>
+				<li id="band"><a href="band.html">Band</a></li>
+				<li id="news"><a href="news.html">News</a></li>
+				<li id="video"><a href="video.html">Video</a></li>
+				<li id="contact"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			<!--content div starts here - Wraps around everything between the header and the footer -->
+			<main > <!--Main content is the left hand side of the page -->
+				<h1 class="greytext headline">The White Album</h1> 
+				<figure>
+					<div class="tooltip"> <img src="images/600px-Weezer_white_album.jpg" alt="Weezer white album"><span class="tooltiptext">OUT NOW</span> </div><!--Tool tip appears when mouse is over img, displays "out now" -->
+					<figcaption>
+						<h2 class="greytext">New Weezer Album</h2></figcaption>
+				</figure>
+			</main>
+			<aside class="greytext"> <!-- Aside is the right hand side of the page -->
+				<h2 class="headline">Band News</h2> <img src="images/concert-984276_1920.jpg" alt="band member">
+
+				<article> <!--Articles wrap sections of text together -->
+					<h2>New Unreleased song</h2>
+					<h6 class="orange">31/10/2016</h6>
+					<p>The song will form half of a new split single with Wavves</p>
+				</article>
+				<article> <!--Articles wrap sections of text together -->
+					<h2>Watch Weezer preform</h2>
+					<h6 class="orange">31/10/2016</h6>
+					<p>Frontman has turned two recent Weezer gigs into a family affair.</p>
+				</article>
+				<article> <!--Articles wrap sections of text together -->
+					<h2>Weezers next Album</h2>
+					<h6 class="orange">31/10/2016</h6>
+					<p>Rivers Cuomo says the band's follow-up to 'The White Album'</p>
+				</article>
+				<img src="images/tumblr_odxa674OBG1slpeezo1_500.jpg" alt="band member">
+			</aside>
+		</div>
+		<!--content div ends here -->
+		<footer>
+			<!--Footer starts here -->
+			<img id="wlogo" src="images/Weezerlogo.png" alt="W Logo"> <!--Weezer W svg logo on the left hand side-->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#.html">Site Map</a></li> <!--dead link. future development of site map page -->
+				<li><a href="#.html">Accesibility</a></li> <!--dead link.  future development of accessibility page -->
+				<li>
+					<p id="copywrite">&copy;Weezer 2016</p> <!--Copywrite symbol used-->
+				</li>
+			</ul> <img id="bwmLogo" src="images/BWM-Logo.png" alt="bwm logo"> <!--BWM svg logo on the right hand side-->
+		</footer>
+	</div>
+	<!--container div ends here -->
+</body>
+
+</html>
+
+
+<!-- -->
